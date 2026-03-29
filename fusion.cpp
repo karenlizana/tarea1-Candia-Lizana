@@ -8,7 +8,6 @@ class arr_extensible {
 
 private:
 
-int* A;
 int* B;
 int tamanioA;
 int capacidadB;
@@ -16,6 +15,10 @@ int capacidadB;
 public:
 
 arr_extensible(){}
+
+~arr_extensible(){
+    delete[] B;
+}
 
 bool setValue(unsigned long i, int v);
 int getValue(unsigned long i);
@@ -28,8 +31,8 @@ unsigned long size();
 
 bool arr_extensible::setValue(unsigned long i, int v){
 
-if (0 <= i && i < tamanioA){
-    A[i] = v;
+if (i < tamanioA){
+    B[i] = v;
     return true;
 } else {
     return false;
@@ -38,7 +41,7 @@ if (0 <= i && i < tamanioA){
 
 int arr_extensible::getValue(unsigned long i){
     if (tamanioA > i) {
-        return A[i];
+        return B[i];
     } else {
         exit(1);
     }
