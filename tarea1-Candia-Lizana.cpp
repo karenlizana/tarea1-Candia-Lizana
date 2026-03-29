@@ -30,9 +30,9 @@ unsigned long size();
 };
 
 bool arr_extensible::setValue(unsigned long i, int v){
-
-if (i < tamanioA){
-    B[i] = v;
+int y = i;
+if (y < tamanioA){
+    B[y] = v;
     return true;
 } else {
     return false;
@@ -40,8 +40,9 @@ if (i < tamanioA){
 }
 
 int arr_extensible::getValue(unsigned long i){
-    if (tamanioA > i) {
-        return B[i];
+    int y = i;
+    if (tamanioA > y) {
+        return B[y];
     } else {
         exit(1);
     }
@@ -88,13 +89,13 @@ void arr_extensible::remove(){
         capacidadB = 0;
         return;
     }
-    unsigned long req = 1;
+    int req = 1;
     while (req < tamanioA) {
         req *= 2;
     }
     if (req < capacidadB) {
         int* Bcopia = new int[req];
-        for (unsigned long i = 0; i < tamanioA; ++i) {
+        for (int i = 0; i < tamanioA; ++i) {
             Bcopia[i] = B[i];
         }
         delete[] B;
