@@ -14,28 +14,27 @@ Permite guardar números enteros y modificar el tamaño del arreglo durante la e
 
 El programa puede:
 
-* Agregar elementos
-* Eliminar el último elemento
-* Obtener un valor por índice
-* Modificar un valor
-* Ver el tamaño del arreglo
+- Agregar elementos
+- Eliminar el último elemento
+- Obtener un valor por índice
+- Modificar un valor
+- Ver el tamaño del arreglo
 
 También permite leer datos desde un archivo y usar un menú por consola.
 
 
 ## Características técnicas
 
-* Sistema operativo: Linux (Ubuntu / WSL)
-* Lenguaje: C++
-* Compilador: g++
-* Estándar: C++11
+- Sistema operativo: Linux (Ubuntu 24.04.3 / WSL)
+- Lenguaje: C++
+- Compilador: g++ 13.3.0
+- Estándar: C++11
 
 
 ## Cómo funciona
 
 El programa usa memoria dinámica para manejar un arreglo.
-
-* Se usa un arreglo base llamado B, wl tamaño del arreglo cambia automáticamente y cuando se llena, se agranda y cuando se vacía, se achica.
+Se usa un arreglo base llamado B, wl tamaño del arreglo cambia automáticamente y cuando se llena, se agranda y cuando se vacía, se achica.
 
 ## Lectura de archivo
 
