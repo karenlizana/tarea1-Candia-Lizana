@@ -49,7 +49,7 @@ el valor de la variable v.
 **** */
 
 bool arr_extensible::setValue(unsigned long i, int v){
-int y = i;
+int y = i; // ajustamos el tipo de parametro para que el if compare dos variables del mismo tipo.
 if (y < tamanioA){
     B[y] = v;
     return true;
@@ -76,7 +76,7 @@ if (y < tamanioA){
 **** */
 
 int arr_extensible::getValue(unsigned long i){
-    int y = i;
+    int y = i; // ajustamos el tipo de parametro para que el if compare dos variables del mismo tipo.
     if (tamanioA > y) {
         return B[y];
     } else {
@@ -105,31 +105,31 @@ void arr_extensible::append(int v){
 
 int* Bcopia;
 
-   if(tamanioA<capacidadB){
-    B[tamanioA] = v;
-    tamanioA++;
+   if(tamanioA<capacidadB){  //Si el tamaño del arreglo B tiene espacio
+    B[tamanioA] = v; 
+    tamanioA++; 
    }else{
     int nuevacapacidadB = 1;
-    while(nuevacapacidadB<=tamanioA){
+    while(nuevacapacidadB<=tamanioA){ // si no hay espacio, calculamos cuanto espacio necesitamos.
         nuevacapacidadB = nuevacapacidadB*2;
     };
 
     Bcopia = new int [capacidadB];
     
-    for(int i=0; i<capacidadB;i++){
+    for(int i=0; i<capacidadB;i++){ //hacemos una copia de B, para poder eliminar la información que tiene y agrandar el arreglo.
         Bcopia[i] = B[i];
     };
     
     delete[] B;
     B = new int [nuevacapacidadB];
 
-    for(int i=0; i<tamanioA;i++){
+    for(int i=0; i<tamanioA;i++){ //pasamos la copia al arreglo original, pero este ya tiene más espacios disponibles.
         B[i] = Bcopia[i];   
     };
 
-    B[tamanioA] = v;
+    B[tamanioA] = v; //podemos asignar valor en la última casilla 
     tamanioA++;
-    capacidadB = nuevacapacidadB;
+    capacidadB = nuevacapacidadB; //guardamos la nueva capacidad de B, este valor se modifica en el TDA.
     delete[] Bcopia;
    };
 }
@@ -152,19 +152,19 @@ int* Bcopia;
 **** */
 
 void arr_extensible::remove(){
-    if (tamanioA == 0) return;
+    if (tamanioA == 0) return; // si no hay arreglo devueve nada.
     tamanioA--;
-    if (tamanioA == 0) {
+    if (tamanioA == 0) { // si no hay arreglo devueve nada.
         delete[] B;
         B = nullptr;
         capacidadB = 0;
         return;
     }
     int req = 1;
-    while (req < tamanioA) {
+    while (req < tamanioA) { // Calcula el espacio de B.
         req *= 2;
     }
-    if (req < capacidadB) {
+    if (req < capacidadB) { // Copiamos la información sin el último valor
         int* Bcopia = new int[req];
         for (int i = 0; i < tamanioA; ++i) {
             Bcopia[i] = B[i];
@@ -222,7 +222,7 @@ void leerArchivo(const string& nombreArchivo, arr_extensible& arreglo) {
     }
 
     int valor;
-    while (archivo >> valor) {
+    while (archivo >> valor) { //lee la información del archivo hasta que encuentre el -1.
         if (valor == -1) {
             break;
         }
@@ -238,7 +238,7 @@ leerArchivo("entrada.txt", *A);
 
 cout << "=== MENU INTERACTIVO ===" << endl;
 bool continuar = true;
-while (continuar) {
+while (continuar) { // Sale el menu de interacción hasta que se cumpla el 6.
     cout << "\nOpciones disponibles:" << endl;
     cout << "1. setvalue(i, v)" << endl;
     cout << "2. getvalue(i)" << endl;
