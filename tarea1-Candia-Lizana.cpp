@@ -36,13 +36,13 @@ unsigned long size();
 * Resumen Funcion: Retorna verdadero o falso dependiendo si la posición i existe dentro del arreglo, además si esta existe, le agrega 
 el valor de la variable v.
 ******
-* Input: 
+* Input
 * TipoParametro: Unsinged long, int
 * NombreParametro : i,v
 * DescripcionParametro: i: numero entero sin signo que marca una posición en el arreglo. v: valor entero que se agrega al arreglo.
 * .......
 ******
-* Returns : 
+* Returns
 * TipoRetorno: Retorna un booleano
 * Descripcion retorno: Retorna verdadero o falso dependiendo si la posición i existe dentro del arreglo, además si esta existe, le agrega 
 el valor de la variable v.
@@ -88,17 +88,17 @@ int arr_extensible::getValue(unsigned long i){
 * TipoFuncion : Void
 * NombreFuncion: append
 ******
-* Resumen Funcion:
+* Resumen Funcion: Agrega un valor entero v a la última posición, si esta está ocupada, entonces el arreglo se multiplica su espacio.
 ******
-* Input :
-* tipoParametro 
-* NombreParametro : 
-* Descripcion Parametro:
+* Input
+* tipoParametro: int
+* NombreParametro : v
+* Descripcion Parametro: Un valor entero que se le agrega al arreglo.
 * .......
 ******
-* Returns :
-* TipoRetorno:
-* Descripcion retorno:
+* Returns
+* TipoRetorno: void/vacio
+* Descripcion retorno: la función no retorna nada, solo realiza modificaciones.
 **** */
 
 void arr_extensible::append(int v){
@@ -135,20 +135,20 @@ int* Bcopia;
 }
 
 /* ****
-* TipoFuncion :
-* NombreFuncion:
+* TipoFuncion: void
+* NombreFuncion: Remove
+****** 
+* Resumen Funcion: Elimina el contenido del arreglo en la posición de n-1.
 ******
-* Resumen Funcion:
-******
-* Input :
-* tipoParametro 
-* NombreParametro : 
-* Descripcion Parametro:
+* Input
+* tipoParametro: No requiere
+* NombreParametro: No requiere
+* Descripcion Parametro: No recibe parametro debido a que las modificaciones se realizan mediante punteros.
 * .......
 ******
-* Returns :
-* TipoRetorno:
-* Descripcion retorno:
+* Returns : No retorna 
+* TipoRetorno: No retorna
+* Descripcion retorno: No retorna nada, ya que solo modifica el arreglo.
 **** */
 
 void arr_extensible::remove(){
@@ -179,17 +179,17 @@ void arr_extensible::remove(){
 * TipoFuncion : Unsigned long
 * NombreFuncion: Size
 ******
-* Resumen Funcion:
+* Resumen Funcion: Función que se utiliza para acceder a la información privada del TDA, y poder utilizarla en la función main.
 ******
-* Input : No recibe parametros
-* tipoParametro 
-* NombreParametro : 
-* Descripcion Parametro:
+* Input 
+* tipoParametro: No recibe parametros.
+* NombreParametro: No recibe parametros.
+* Descripcion Parametro: No recibe parametros, ya que la función solo es para acceder a información privada del TDA.
 * .......
 ******
-* Returns :
-* TipoRetorno:
-* Descripcion retorno:
+* Returns
+* TipoRetorno: Unsigned long
+* Descripcion retorno: Retorna el tamaño del arreglo A.
 **** */
 
 unsigned long arr_extensible::size(){
@@ -197,20 +197,21 @@ unsigned long arr_extensible::size(){
 }
 
 /* ****
-* TipoFuncion :
-* NombreFuncion:
+* TipoFuncion : Void
+* NombreFuncion: leerArchivo
 ******
-* Resumen Funcion:
+* Resumen Funcion: Lee el archivo donde se encuentra los datos del arreglo, y los almacena en un arreglo tipo arr_extensible.
 ******
-* Input :
-* tipoParametro 
-* NombreParametro : 
-* Descripcion Parametro:
+* Input
+* tipoParametro: const string / arr_extensible
+* NombreParametro : nombreArchivo / arreglo
+* Descripcion Parametro: nombreArchivo, es la dirección de memoria donde se encuentra el nombre del archivo a abrir
+arreglo, es la dirección de memoria del arreglo donde se guardará la información.
 * .......
 ******
-* Returns :
-* TipoRetorno:
-* Descripcion retorno:
+* Returns
+* TipoRetorno: No retorna
+* Descripcion retorno: La función no retorna nada, solo crea un arreglo.
 **** */
 
 void leerArchivo(const string& nombreArchivo, arr_extensible& arreglo) {
@@ -230,24 +231,6 @@ void leerArchivo(const string& nombreArchivo, arr_extensible& arreglo) {
 
     archivo.close();
 }
-
-/* ****
-* TipoFuncion :
-* NombreFuncion:
-******
-* Resumen Funcion:
-******
-* Input :
-* tipoParametro 
-* NombreParametro : 
-* Descripcion Parametro:
-* .......
-******
-* Returns :
-* TipoRetorno:
-* Descripcion retorno:
-**** */
-
 
 int main(){
 arr_extensible* A = new arr_extensible();
