@@ -5,9 +5,7 @@
 ## Integrantes
 
 * Karen Lizana
-* (Nombre compañero/a)
-
----
+* Matias Candia
 
 ## Descripción
 
@@ -24,7 +22,6 @@ El programa puede:
 
 También permite leer datos desde un archivo y usar un menú por consola.
 
----
 
 ## Características técnicas
 
@@ -33,67 +30,19 @@ También permite leer datos desde un archivo y usar un menú por consola.
 * Compilador: g++
 * Estándar: C++11
 
----
 
 ## Cómo funciona
 
 El programa usa memoria dinámica para manejar un arreglo.
 
-Internamente:
-
-* Se usa un arreglo base llamado B
-* El tamaño del arreglo cambia automáticamente
-* Cuando se llena, se agranda
-* Cuando se vacía, se achica
-
-Para esto se usa:
-
-* `new[]` para crear memoria
-* `delete[]` para liberar memoria
-
----
+* Se usa un arreglo base llamado B, wl tamaño del arreglo cambia automáticamente y cuando se llena, se agranda y cuando se vacía, se achica.
 
 ## Lectura de archivo
 
-El programa lee números desde un archivo, uno por línea, hasta encontrar un -1.
-
-Ejemplo:
-
-```id="v1k3tp"
-10
-12
-13
--1
-```
-
----
+El nombre del archivo debe llamarse "entrada.txt"
 
 ## Compilación
 
-```bash id="6cz2yj"
-make
-```
+g++ tarea1-Candia-Lizana.cpp -o tarea1 -Wall
 
----
 
-## Ejecución
-
-```bash id="g9s0m3"
-make run
-```
-
----
-
-## Limpieza
-
-```bash id="8z6r8b"
-make clean
-```
-
----
-
-## Observaciones
-
-* No se usa STL (vector, etc.)
-* Se trabaja con punteros y memoria dinámica
-* El programa fue probado en Linux
