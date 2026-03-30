@@ -1,7 +1,5 @@
 # tarea1-Candia-Lizana
 
-# Tarea 1 - Estructuras de Datos
-
 ## Integrantes
 
 * Karen Lizana
