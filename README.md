@@ -33,7 +33,7 @@ cuando el arreglo B está lleno y se achica cuando se vacía.
 
 ## Lectura de archivo
 
-El nombre del archivo debe llamarse "entrada.txt"
+El nombre del archivo debe llamarse "entrada.txt" para que el programa funcione correctamente.
 
 ## Compilación
 
