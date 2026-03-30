@@ -28,8 +28,8 @@ También permite leer datos desde un archivo y usar las funciones mediante una c
 
 ## Cómo funciona
 
-El programa usa memoria dinámica para manejar un arreglo.
-Se usa un arreglo base llamado B, wl tamaño del arreglo cambia automáticamente y cuando se llena, se agranda y cuando se vacía, se achica.
+El programa una memoria dinámica para manejar un arreglo, usamos un arreglo inicial A el cual se encuentra en el interior de B, el tamaño del arreglo se agranda
+cuando el arreglo B está lleno y se achica cuando se vacía. 
 
 ## Lectura de archivo
 
