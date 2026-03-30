@@ -29,6 +29,25 @@ unsigned long size();
 
 };
 
+/* ****
+* TipoFuncion : Bool
+* NombreFuncion: SetValue
+******
+* Resumen Funcion: Retorna verdadero o falso dependiendo si la posición i existe dentro del arreglo, además si esta existe, le agrega 
+el valor de la variable v.
+******
+* Input: 
+* TipoParametro: Unsinged long, int
+* NombreParametro : i,v
+* DescripcionParametro: i: numero entero sin signo que marca una posición en el arreglo. v: valor entero que se agrega al arreglo.
+* .......
+******
+* Returns : 
+* TipoRetorno: Retorna un booleano
+* Descripcion retorno: Retorna verdadero o falso dependiendo si la posición i existe dentro del arreglo, además si esta existe, le agrega 
+el valor de la variable v.
+**** */
+
 bool arr_extensible::setValue(unsigned long i, int v){
 int y = i;
 if (y < tamanioA){
@@ -39,6 +58,23 @@ if (y < tamanioA){
 }
 }
 
+/* ****
+* TipoFuncion : Int 
+* NombreFuncion: getValue
+******
+* Resumen Funcion: Recibe una posicion para el arreglo, evalua si esta p
+******
+* Input
+* tipoParametro: Unsigned long
+* NombreParametro : i
+* Descripcion Parametro: Número entero positivo que marca la posicion en el arreglo.
+* .......
+******
+* Returns 
+* TipoRetorno: Retorna un entero
+* Descripcion retorno: Retorna el valor de la posicion i en el arreglo.
+**** */
+
 int arr_extensible::getValue(unsigned long i){
     int y = i;
     if (tamanioA > y) {
@@ -46,7 +82,25 @@ int arr_extensible::getValue(unsigned long i){
     } else {
         exit(1);
     }
-}    
+}  
+
+/* ****
+* TipoFuncion : Void
+* NombreFuncion: append
+******
+* Resumen Funcion:
+******
+* Input :
+* tipoParametro 
+* NombreParametro : 
+* Descripcion Parametro:
+* .......
+******
+* Returns :
+* TipoRetorno:
+* Descripcion retorno:
+**** */
+
 void arr_extensible::append(int v){
 
 int* Bcopia;
@@ -80,6 +134,23 @@ int* Bcopia;
    };
 }
 
+/* ****
+* TipoFuncion :
+* NombreFuncion:
+******
+* Resumen Funcion:
+******
+* Input :
+* tipoParametro 
+* NombreParametro : 
+* Descripcion Parametro:
+* .......
+******
+* Returns :
+* TipoRetorno:
+* Descripcion retorno:
+**** */
+
 void arr_extensible::remove(){
     if (tamanioA == 0) return;
     tamanioA--;
@@ -104,9 +175,43 @@ void arr_extensible::remove(){
     }
 }   
 
+/* ****
+* TipoFuncion : Unsigned long
+* NombreFuncion: Size
+******
+* Resumen Funcion:
+******
+* Input : No recibe parametros
+* tipoParametro 
+* NombreParametro : 
+* Descripcion Parametro:
+* .......
+******
+* Returns :
+* TipoRetorno:
+* Descripcion retorno:
+**** */
+
 unsigned long arr_extensible::size(){
     return tamanioA;
 }
+
+/* ****
+* TipoFuncion :
+* NombreFuncion:
+******
+* Resumen Funcion:
+******
+* Input :
+* tipoParametro 
+* NombreParametro : 
+* Descripcion Parametro:
+* .......
+******
+* Returns :
+* TipoRetorno:
+* Descripcion retorno:
+**** */
 
 void leerArchivo(const string& nombreArchivo, arr_extensible& arreglo) {
     ifstream archivo(nombreArchivo);
@@ -125,6 +230,24 @@ void leerArchivo(const string& nombreArchivo, arr_extensible& arreglo) {
 
     archivo.close();
 }
+
+/* ****
+* TipoFuncion :
+* NombreFuncion:
+******
+* Resumen Funcion:
+******
+* Input :
+* tipoParametro 
+* NombreParametro : 
+* Descripcion Parametro:
+* .......
+******
+* Returns :
+* TipoRetorno:
+* Descripcion retorno:
+**** */
+
 
 int main(){
 arr_extensible* A = new arr_extensible();
