@@ -7,10 +7,8 @@
 
 ## Descripción
 
-Este programa implementa un arreglo extensible en C++.
-Permite guardar números enteros y modificar el tamaño del arreglo durante la ejecución.
-
-El programa puede:
+Programa que modifica un arreglo, el cual puede aumentar o disminuir su tamaño según se le pida al sistema, este 
+puede realizar las siguientes acciones:
 
 - Agregar elementos
 - Eliminar el último elemento
@@ -18,8 +16,7 @@ El programa puede:
 - Modificar un valor
 - Ver el tamaño del arreglo
 
-También permite leer datos desde un archivo y usar un menú por consola.
-
+También permite leer datos desde un archivo y usar las funciones mediante una consola.
 
 ## Características técnicas
 
